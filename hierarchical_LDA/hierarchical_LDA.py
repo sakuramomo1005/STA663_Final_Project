@@ -41,6 +41,22 @@ def CRP_next(lambdas,topic):
 
 
 def topics(corpus,lambdas):
+    """
+    Description
+    ---------
+    Funcion: draw the tree plot
+    
+    Parameter
+    ---------
+    hlda: the results from the hierarchical_LDA function
+    num: how many words to show in each nodes
+    alpha, beta,lambdas, eta: parameters 
+    
+    Return
+    ------
+    node: a list of lists, the content in nodes
+    node_num: node number in each level
+    """    
     topic=[]
     for docs in corpus:
         for word in docs:
@@ -95,6 +111,20 @@ def Z(corpus, T, alpha, beta):
     return(topic,topic_num)
 
 def CRP_prior(corpus,topic,lambdas):
+    """
+    Description
+    ---------
+    Funcion: Chinese Restaurant Process
+    
+    Parameter
+    ---------
+    alpha: concentration parameter 
+    topic: the exist tables 
+    
+    Return
+    ------
+    p: the probability for a new customer to sit in each of the tables
+    """
     res=np.zeros((len(corpus),len(topic)))
     for i,docs in enumerate(corpus):
         p_topic=[]
@@ -110,7 +140,21 @@ def CRP_prior(corpus,topic,lambdas):
 
 
 def word_likelihood(corpus,topic,eta):
-
+    """
+    Description
+    ---------
+    Funcion:  the p(w_m | c, w_{-m},z) likelihood function
+    
+    Parameter
+    ---------
+    corpus: the total corpus, a list of documents, that is, a list of lists
+    topic: the exist topics
+    eta: free parameters
+    
+    Return
+    ------
+    res: a matrix with rownum=document number and column number=topic number
+    """
     import math
     import numpy as np
     from scipy.special import gammaln
@@ -150,7 +194,22 @@ def word_likelihood(corpus,topic,eta):
 
 
 def nodes(corpus,T,alpha,beta,lambdas,eta,iters=100):
-
+    """
+    Description
+    ---------
+    Funcion:  Gibbs sampling 
+    
+    Parameter
+    ---------
+    corpus: the total corpus, a list of documents, that is, a list of lists
+    T: topic number, artifical
+    iters: iteration times
+    alpha, beta,lambdas, eta: parameters 
+    
+    Return
+    ------
+    wn_topic: a list of lists, the content in nodes
+    """
     word_list=[]
     for x in corpus:
         word_list=word_list+x
@@ -198,7 +257,24 @@ def nodes(corpus,T,alpha,beta,lambdas,eta,iters=100):
 
 
 def hierarchical_LDA(corpus, alpha, beta, lambdas, eta, iters, level,num=5):
+    """
+    Description
+    ---------
+    Funcion:  hierarchical LDA model for topics identify
     
+    Parameter
+    ---------
+    corpus: the total corpus, a list of documents, that is, a list of lists
+    iters: iteration times
+    level: the tree level
+    num: how many words to show in each nodes
+    alpha, beta,lambdas, eta: parameters 
+    
+    Return
+    ------
+    node: a list of lists, the content in nodes
+    node_num: node number in each level
+    """    
     from collections import Counter
     import numpy as np
     
@@ -232,7 +308,22 @@ def hierarchical_LDA(corpus, alpha, beta, lambdas, eta, iters, level,num=5):
 
 
 def tree_plot(hlda,num=5):
+    """
+    Description
+    ---------
+    Funcion: draw the tree plot
     
+    Parameter
+    ---------
+    hlda: the results from the hierarchical_LDA function
+    num: how many words to show in each nodes
+    alpha, beta,lambdas, eta: parameters 
+    
+    Return
+    ------
+    node: a list of lists, the content in nodes
+    node_num: node number in each level
+    """        
     from IPython.display import Image, display
     import matplotlib.pyplot as plt
     from collections import Counter
