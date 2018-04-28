@@ -1,3 +1,5 @@
 
 
-The data is a corpus of documents, which is downloaded from Blei's sample data: https://github.com/blei-lab/lda-c/tree/master/example
+The ap.txt data is a corpus of documents, which is downloaded from Blei's sample data: https://github.com/blei-lab/lda-c/tree/master/example
+
+The pubmed data is the dataset we used in our homework. Just use it to have a try
