@@ -30,6 +30,8 @@ If we have M customers, the CRP will give us a partion of M customers, which has
 
 ![](https://https://raw.githubusercontent.com/sakuramomo1005/STA663_Final_Project/master/Data/1.png | width=100)
 
+<img src="https://github.com/favicon.ico" width="80">
+
 <img src=https://raw.githubusercontent.com/sakuramomo1005/STA663_Final_Project/master/Data/1.png alt="Drawing" style="width: 600px;"/>
 
 <p style="text-align: center;">
