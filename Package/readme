@@ -1,10 +1,8 @@
 
 The hierarchical_LDA code of the paper Hierarchical Topic Models and the Nested Chinese Restaurant Process is released on github with the package named hierarchical_LDA. 
-
 One can easily install the package by:
 
  + pip install --index-url https://test.pypi.org/simple/ hierarchical_LDA
-
  + Or download from https://github.com/sakuramomo1005/STA663_Final_Project.git and install by running python setup.py install. 
 
 The package provides 4 functions:
