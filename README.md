@@ -28,11 +28,9 @@ where $m_i$ represnets the number of previous customers at the table $i$; $\gamm
 
 If we have M customers, the CRP will give us a partion of M customers, which has the same structure as a Dirichlet process. 
 
-![](https://https://raw.githubusercontent.com/sakuramomo1005/STA663_Final_Project/master/Data/1.png | width=100)
-
 <img src="https://github.com/favicon.ico" width="80">
 
-<img src=https://raw.githubusercontent.com/sakuramomo1005/STA663_Final_Project/master/Data/1.png alt="Drawing" style="width: 600px;"/>
+<img src="https://raw.githubusercontent.com/sakuramomo1005/STA663_Final_Project/master/Data/1.png" width="200">
 
 <p style="text-align: center;">
 Figure 1: Chinese restaurant process 
