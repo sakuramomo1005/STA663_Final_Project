@@ -186,7 +186,10 @@ where,
 
 We fitted our hLDA model to a dataset to demostrate the applicability to real data. Using the data set pubmed.pic from our homework, with a documents of 178 and word vocabulary of 1444. We fisrtly drew a wordcloud plot (Figure 6) to show the frequencies of words. And then we tested the hLDA model and drew the tree plot.A four level hierachy was estimated and shown in Figure 7. Our model captured function words without an auxiliary list which usually required for other models. From the results, we can conclude that hLDA can be a useful approach when dealing with text applications. 
 
-<img src=https://raw.githubusercontent.com/sakuramomo1005/STA663_Final_Project/master/Data/wordcloud.png alt="Drawing" style="width: 600px;"/>
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/sakuramomo1005/STA663_Final_Project/master/Data/wordcloud.png" width="600">
+</p>
 
 hLDA results: not show, please see the notebook report
 
