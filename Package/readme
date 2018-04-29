@@ -1,1 +1,76 @@
-The codes in this folder show how we created and distributed our package and how to install the package by using ! pip install
+
+The hierarchical_LDA code of the paper Hierarchical Topic Models and the Nested Chinese Restaurant Process is released on github with the package named hierarchical_LDA. 
+
+One can easily install the package by:
+
+ + pip install --index-url https://test.pypi.org/simple/ hierarchical_LDA
+
+ + Or download from https://github.com/sakuramomo1005/STA663_Final_Project.git and install by running python setup.py install. 
+
+The package provides 4 functions:
+
+   + hierarchical_LDA.CRP_next: 
+    + Funcion:  Chinese Restaurant Process
+    + Input: 
+      + lambdas: concentration parameter 
+      + topic: the exist tables 
+
+
+   + hierarchical_LDA.topics: 
+    + Funcion:  sample zmn under LDA model
+    + Input: 
+      + corpus: the total corpus, a list of documents, that is, a list of lists
+      + lambdas: concentration parameter 
+      
+    
+   + hierarchical_LDA.Z: 
+    + Funcion:  sample zmn under LDA model
+    + Input: 
+      + corpus: the total corpus, a list of documents, that is, a list of lists
+      + T: the number of topics
+      + alpha, beta: parameters 
+
+    
+  + hierarchical_LDA.CRP_prior: 
+    + Funcion:  Chinese Restaurant Process
+    + Input: 
+      + corpus: the total corpus, a list of documents, that is, a list of lists
+      + topic: the exist topics
+      + eta: free parameters
+
+    
+   + hierarchical_LDA.nodes: 
+    + Funcion:  Gibbs sampling 
+    + Input: 
+      + corpus: the total corpus, a list of documents, that is, a list of lists
+      + T: topic number, artifical
+      + iters: iteration times
+      + alpha, beta,lambdas, eta: parameters 
+
+    
+  + hierarchical_LDA.word_likelihood: 
+    + Funcion:  the $p(w_m | c, w_{-m},z)$ likelihood function
+    + Input: 
+      + corpus: the total corpus, a list of documents, that is, a list of lists
+      + topic: the exist topics
+      + eta: free parameters
+ 
+
+   + hierarchical_LDA.hierarchical_LDA: 
+    + Funcion:  hierarchical LDA model for topics identify
+    + Input: 
+      + hlda: the results from the hierarchical_LDA function
+      + num: how many words to show in each nodes
+      + corpus: the total corpus, a list of documents, that is, a list of lists
+      + iters: iteration times
+      + level: the tree level
+      + num: how many words to show in each nodes
+      + alpha, beta,lambdas, eta: parameters 
+
+    
+  + hierarchical_LDA.tree_plot: 
+    + Funcion for the tree plot generation
+    + Input: 
+      + hlda: the results from the hierarchical_LDA function
+      + num: how many words to show in each nodes
+
