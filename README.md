@@ -6,6 +6,8 @@ sta 663 final project with Yiling Liu
 Hierarchical Topic Models and the Nested Chinese Restaurant Process
 
 
+# Hierarchical Topic Models and the Nested Chinese Restaurant Process
+
 ## 1. Introduction
 Current statistical modeling tools, in particular, classical model selection techniques which based on hypothesis testing behaves poorly in growing datasets which bring new entities and new structures to the fore. However, recently various domains have dataset with open-ended nature, complex probabilistic models were proposed to address the challenges brought by the growing dataset among which the problem of learning a topic hierarchy from data is very important. For example, if we want to discover common usage patterns or topics in a collection of "documents" which contain a set of words, we need to specify a generative probabilistic model for hierarchical structures and adopt Bayesian perspective to learn such structures from data. One approach is to use Chinese Restaurant Process (CRP) which is a distribution on partitions of integers. CRP treats our hierarchies as random variables and constructs the
 hierarchies procedurally based on the available data. It relaxes the constrains of dimensions and uses unbounded dimensionality of classes which means one class from infinite array of classes is assigned to each object. However, in the paper "Hierarchical Topic models and
@@ -32,7 +34,7 @@ If we have M customers, the CRP will give us a partion of M customers, which has
 <img src="https://raw.githubusercontent.com/sakuramomo1005/STA663_Final_Project/master/Data/1.png" width="500">
 </p>
 
-<p style="text-align: center;">
+<p align="center">
 Figure 1: Chinese restaurant process 
 </p>
 
@@ -41,9 +43,11 @@ The CRP establishes a one-to-one relationship between tables and mixture compone
 
 We can see an example in the following plot To help understand the nCRP.
 
-<img src=https://raw.githubusercontent.com/sakuramomo1005/STA663_Final_Project/master/Data/2.png alt="Drawing" style="width: 600px;"/>
+<p align="center">
+<img src="https://raw.githubusercontent.com/sakuramomo1005/STA663_Final_Project/master/Data/2.png" width="500">
+</p>
 
-<p style="text-align: center;">
+<p align="center">
 Figure 2: nested Chinese restaurant process 
 </p>
 
@@ -72,10 +76,11 @@ Besides, when the $p(\theta|\alpha)$ is chosen to be a Dirichlet distribution, t
 <br>
 + $\alpha,\beta$: parameters that specifying the nature of priors on $\theta$ and $\phi$
 
+<p align="center">
+<img src="https://raw.githubusercontent.com/sakuramomo1005/STA663_Final_Project/master/Data/3.png" width="500">
+</p>
 
-<img src=https://raw.githubusercontent.com/sakuramomo1005/STA663_Final_Project/master/Data/3.png alt="Drawing" style="width: 500px;"/>
-
-<p style="text-align: center;">
+<p align="center">
 Figure 3: Plate notation for LDA with Dirichlet-distributed topic-word distribution
 </p>
 
@@ -90,9 +95,11 @@ Generation of a document:
 
 This generation of document is very simliar with previous one except the mixing proportion $\theta$ is from a hierarchical structure
 
-<img src=https://raw.githubusercontent.com/sakuramomo1005/STA663_Final_Project/master/Data/4.png alt="Drawing" style="width: 500px;"/>
+<p align="center">
+<img src="https://raw.githubusercontent.com/sakuramomo1005/STA663_Final_Project/master/Data/4.png" width="500">
+</p>
 
-<p style="text-align: center;">
+<p align="center">
 Figure 4: hierarchical LDA with a nested CRP prior
 </p>
 
