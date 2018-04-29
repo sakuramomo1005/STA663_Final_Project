@@ -34,7 +34,21 @@ If we have M customers, the CRP will give us a partion of M customers, which has
 Figure 1: Chinese restaurant process 
 </p>
 
+### 2.1 Nested Chinese Restaurant Process
+The CRP establishes a one-to-one relationship between tables and mixture components. A hierarchical version of CRP was also developed to model one-to-many. The proecss like this is called nested Chinese Restaurant Restaurant Process (nCPR).The nCRP is very similar with CRP except for its hieracrchical structure. 
+
+We can see an example in the following plot To help understand the nCRP.
+
+<img src=https://raw.githubusercontent.com/sakuramomo1005/STA663_Final_Project/master/Data/2.png alt="Drawing" style="width: 600px;"/>
+
+<p style="text-align: center;">
+Figure 2: nested Chinese restaurant process 
+</p>
+
 Suppose a traveller came to a new city and wanter to try the restaurants there. There is a root restaurant, which is the first stop for new travellers. He came to the root restaurant and chose a table based on the Chinese restaurant process we described before. And each table has a card that references to the next restaurant. The traveller followed the card's instruction and went to the restaurant on the card. Then he chose a table in the second restaurant followed the CRP. In a conclusion, each traveller has a path that contains a batch of restaurants and each restaurant represents a level of the topic model. 
+
+
+
 
 ## 3. A hierarchical topic model
 In machine learning and natural language processing, a topic model is a type of statistical model for discovering the abstract "topics" that occur in a collection of documents. Topic modeling is a frequently used text-mining tool for discovery of hidden semantic structures in a text body.Imagine we have a batch of documents, which compose a corpus. The words in the corpus compose the vocabulary. 
