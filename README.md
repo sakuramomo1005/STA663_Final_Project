@@ -30,7 +30,7 @@ If we have M customers, the CRP will give us a partion of M customers, which has
 
 <img src="https://github.com/favicon.ico" width="80">
 
-<img src="https://raw.githubusercontent.com/sakuramomo1005/STA663_Final_Project/master/Data/1.png" width="200">
+<img src="https://raw.githubusercontent.com/sakuramomo1005/STA663_Final_Project/master/Data/1.png" width="2000">
 
 <p style="text-align: center;">
 Figure 1: Chinese restaurant process 
